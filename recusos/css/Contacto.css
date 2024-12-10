@@ -1,0 +1,510 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html, body {
+    height: 100%; /* Ocupar toda la altura de la pantalla */
+}
+body {
+    display: flex;
+    flex-direction: column; /* Alinear en columna */
+    justify-content: space-between; /* Espacio entre header, contenido y footer */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo del header */
+.header {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    ),
+    url(imagenes/inicio/bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh; /* Reduce la altura mínima del header */
+    display: flex;
+    align-items: center;
+    padding: 20px; /* Ajusta el padding para reducir el espacio interior */
+    text-align: center; /* Centra el texto en el header */
+}
+
+@media(min-width: 768px) {
+    .header {
+        background-attachment: fixed; /* Fija la imagen de fondo en pantallas grandes */
+    }
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #c06537;
+}
+
+.logo h2 span {
+    color: #5b37c0;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+    
+}
+
+.menu .navbar ul li a:hover {
+    color: #CE9678;
+    transform: scale(1.1);
+}
+
+#menu {
+    display: none; /* Oculta el checkbox para el menú */
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none; /* Oculta el label del menú en pantallas grandes */
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 70px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.header-content p {
+    line-height: 20px;
+    font-size: 16px;
+    color: #C5C5C5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 5px 25px;
+    background-color: #29221e;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-2:hover {
+    background-color: #2cd1dc;
+}
+
+/* Botones de información */
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #CE967B;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+
+.btn-1:hover {
+    background-color: #ebadeb;
+}
+
+/* Estilo para la imagen ISO */
+.logo_ISO {
+    width: 30px; /* Ajusta el ancho de la imagen según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+
+
+
+
+
+/* Estilo de las secciones */
+
+    .contenedor {
+        flex: 1; /* Permitir que el contenedor crezca para llenar el espacio */
+        display: grid; /* Grid para la disposición */
+        grid-template-columns: 64% 36%; /* Ajuste de columnas */
+        gap: 20px; /* Espacio entre columnas */
+        padding: 20px;
+    }
+
+
+/* Estilo para la sección derecha */
+/* Estilo para la sección derecha */
+/* Estilo para la sección derecha */
+/* Sección derecha */
+/* Sección derecha */
+/* Ajustes para la sección derecha */
+.seccion_de {
+    position: relative;
+    background: rgba(255, 87, 34, 0.9); /* Fondo naranja */
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Contenido al inicio */
+    align-items: center; /* Centrado horizontal */
+    height: auto; 
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    overflow: hidden; /* Evita desbordamientos */
+    min-height: 100%;
+}
+
+/* Contenedor con scroll interno */
+.seccion_de_content {
+    width: 100%;
+    height: 100%; /* Ocupar toda la altura disponible */
+    overflow-y: auto; /* Scroll solo si es necesario */
+    padding-right: 15px; /* Espacio para la barra de desplazamiento */
+    box-sizing: border-box; /* Incluye padding en el tamaño */
+}
+
+/* Elementos de información */
+.info-item {
+    width: 90%; /* Ajusta el ancho */
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Íconos */
+.info-item i {
+    font-size: 36px;
+    color: #FFD700;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto rotación de íconos */
+.info-item:hover i {
+    transform: rotate(360deg);
+}
+
+/* Efecto flotante al pasar el ratón */
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Asegura que el contenido esté encima del pseudo-elemento */
+.seccion_de > * {
+    position: relative;
+    z-index: 2; /* Encima del pseudo-elemento */
+}
+
+
+/* Título de la sección derecha */
+.seccion_de h2 {
+    font-size: 36px; /* Tamaño del encabezado */
+    color: #FFD700; /* Color dorado */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+}
+
+/* Ajustes para los elementos de información */
+.info-item {
+    margin-bottom: 20px; /* Espacio entre elementos */
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro para los elementos */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espacio interno */
+    opacity: 0; /* Inicia oculto */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+    animation: slideIn 0.5s forwards; /* Aplicar animación */
+}
+
+/* Animación de deslizamiento */
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Totalmente transparente al inicio */
+        transform: translateY(20px); /* Comienza desplazado hacia abajo */
+    }
+    100% {
+        opacity: 1; /* Totalmente visible al final */
+        transform: translateY(0); /* En su posición original */
+    }
+}
+
+/* Asegúrate de agregar una variable --i para cada elemento */
+.info-item:nth-child(1) { animation-delay: 0s; }
+.info-item:nth-child(2) { animation-delay: 0.2s; }
+.info-item:nth-child(3) { animation-delay: 0.4s; }
+.info-item:nth-child(4) { animation-delay: 0.6s; }
+
+/* Estilo de los iconos */
+.info-item i {
+    font-size: 36px; /* Tamaño del icono */
+    color: #FFD700; /* Color dorado para los iconos */
+    margin-bottom: 10px; /* Espacio debajo del icono */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Rotación de iconos al hacer hover */
+.info-item:hover i {
+    transform: rotate(360deg); /* Rotación completa */
+}
+
+/* Efecto de flotación al pasar el ratón */
+.info-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+    transform: translateY(-5px); /* Efecto de flotación */
+}
+
+/* Pseudo-elemento para el color de fondo transparente */
+.seccion_de::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 87, 34, 0.7); /* Naranja transparente */
+    z-index: 1; /* Asegura que el color esté encima de la imagen */
+}
+
+/* Asegura que el texto se muestre encima del pseudo-elemento */
+.seccion_de > * {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté encima del color de fondo */
+}
+
+/* Estilo para el encabezado en la sección derecha */
+.seccion_de h2 {
+    font-size: 36px; /* Tamaño grande para el encabezado */
+    font-weight: bold; /* Negrita  */
+    color: #FFD700; /* Color dorado para contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra de texto para resaltar */
+    margin-bottom: 20px;
+}
+
+/* Estilo para el párrafo en la sección derecha */
+.seccion_de p {
+    font-size: 18px; /* Tamaño de fuente adecuado */
+    line-height: 1.6; /* Espacio entre líneas */
+    color: #E0E0E0; /* Gris claro para contraste */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra sutil para mejorar la legibilidad */
+    max-width: 80%; /* Limita el ancho del texto para mejor legibilidad */
+    margin: 0 auto; /* Centra el texto */
+}
+
+/* Estilo de la sección izquierda */
+.seccion_iz {
+    background-color: #FAF9F6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección izquierda */
+.seccion_iz h3 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Descripción en la sección izquierda */
+.seccion_iz p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario en la sección izquierda */
+.seccion_iz form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.seccion_iz label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.form_label{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "input";
+
+}
+/* Estilo para los inputs por defecto */
+.form_inputs {
+    grid-area: input;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d7d0d0;
+    padding: 0.7rem 1.5rem;
+    transition: border 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+/* Animación al enfocar (focus) */
+.form_inputs:focus {
+    border-color: #5b37c0; /* Borde morado */
+    box-shadow: 0 0 8px rgba(91, 55, 192, 0.5); /* Sombra morada */
+    transition: 0.3s ease;
+}
+
+/* Placeholder animado: desplazamiento al enfocar */
+.form_inputs::placeholder {
+    color: #aaa;
+    transition: transform 0.3s, font-size 0.3s;
+    transform-origin: left top;
+}
+
+/* Cambiar el placeholder al hacer focus */
+.form_inputs:focus::placeholder {
+    transform: translateY(-20px) scale(0.85); /* Desplaza hacia arriba y reduce tamaño */
+    opacity: 0.7;
+}
+
+
+
+/* Estilo de los campos de entrada en el formulario */
+.seccion_iz input, .seccion_iz textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilo específico para el área de texto */
+.seccion_iz textarea {
+    grid-area: input;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d7d0d0;
+    padding: 0.7rem 1.5rem;
+    transition: border 0.3s, box-shadow 0.3s;
+    outline: none;
+    resize: vertical; /* Permitir redimensionar verticalmente en textarea */
+}
+
+/* Animación de foco en inputs y textarea */
+.form_inputs, 
+.seccion_iz textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d7d0d0;
+    padding: 0.7rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    outline: none;
+}
+
+/* Efecto flotante 3D al pasar el ratón */
+.form_inputs:hover, 
+.seccion_iz textarea:hover {
+    transform: translateY(-5px); /* Elevación */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Efecto flotante al hacer focus */
+.form_inputs:focus, 
+.seccion_iz textarea:focus {
+    transform: translateY(-8px) scale(1.01); /* Elevación + ligero escalado */
+    box-shadow: 0px 12px 20px rgba(91, 55, 192, 0.3); /* Sombra morada */
+    border-color: #5b37c0; /* Borde morado */
+}
+
+/* Efecto flotante en el botón de enviar */
+.boton-enviar {
+    background: linear-gradient(45deg, #FF5722, #FFD700);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto 3D en el botón al pasar el ratón */
+.boton-enviar:hover {
+    transform: translateY(-8px); /* Elevación */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra dinámica */
+    background: linear-gradient(45deg, #FFD700, #FF5722); /* Gradiente inverso */
+}
+
+
+/* Estilo del footer */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Asegura que los elementos no se desborden */
+}
+
+.footer .link h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer .link ul li a {
+    color: #ccc;
+    margin-bottom: 5px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.footer .link ul li a:hover {
+    color: #fff;
+}

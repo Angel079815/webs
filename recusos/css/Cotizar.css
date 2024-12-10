@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sección superior  para inicializar el APARTADO HEADER*/
+.header {
+    background-color: #0a141d;
+    
+}
+/*-----------------------------------------*/
+/* primera division del HEADER la seccion de los botones login/contactenos*/
+.header-top {
+    padding: 1px 20px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.header-top .top-links a {
+    margin: 0 15px;
+    color: #f5eded;
+    text-decoration: none;
+}
+/*-----------------------------------------*/
+/* segunda donde se ecnuentran los botones de inicio-servicio-producto-contacto*/
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea todo verticalmente */
+    padding: 0px 20px; /* Agrega espacio dentro del contenedor */
+    color: white;
+    height: 60px;
+
+}
+.header-1 .menu  {
+    display: flex; /* Configura el layout del menú */
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 10px; /* Espaciado entre el logo y otros elementos */
+    }
+    .header-1 .navbar  ul li {
+        position: relative;
+        float: left;
+        
+    }
+    .header-1 .navbar ul li a {
+
+        font-size: 18px;
+        padding: 10px;
+        color: #ffffff;
+        display: block;
+        font-weight: 600;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+.header-1 .navbar ul li a:hover {
+    color: #37c055; /* Cambiar color */
+    transform: scale(1.1); /* Agrandar ligeramente */
+    transform: translateY(0);
+    
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    cursor: pointer;
+    width: 25px;
+    display: none;
+}
+
+.menu .navbar {
+    cursor: pointer;
+
+}
+/* LOGO */
+.logo{
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0; /* Asegura que no haya desplazamiento */
+    width: auto; /* Asegura que no tome más espacio del necesario */
+ 
+ }
+.logo img{
+    max-height: 50px; /* Ajusta el tamaño del logo */
+    margin-right: 20px; /* Añade espacio a la derecha del logo */
+}
+.nombre_empresa{
+    font-size: 1.2em;
+    color: white;
+ 
+ }
+.Servicios {
+    font-weight: bold;
+    color: #c06537;
+   
+}
+
+.Electronicos {
+    font-style: italic;
+    color: #5b37c0;
+    
+}
+
+
+
+/*-----------------------------------------*/
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.upload-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.info-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.products-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.no-products {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.footer{
+    padding: 100px;
+    background-color: #111111;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+.link h3{
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.link a {
+    font-size: 16px;
+    color: #dcdcdc;
+    display: block;
+    margin-bottom: 10px;
+}
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header-1 {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-1 .menu {
+        margin-top: 10px;
+    }
+
+    .header-1 .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-1 .menu {
+        margin-top: 10px;
+    }
+
+    .menu-icono {
+        display: block;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-top {
+        font-size: 12px;
+    }
+
+    .header-1 .navbar ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .logo img {
+        max-height: 40px;
+    }
+
+    .nombre_empresa {
+        font-size: 1em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

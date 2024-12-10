@@ -1,0 +1,63 @@
+*{
+    text-decoration: none;
+}
+body{
+font-family: sans-serif;
+margin: 0;
+
+}
+header nav a{
+text-decoration: none;
+color: #fff;
+
+
+}
+.Servicios {
+    color: #c06537;
+   
+}
+
+.Electronicos {
+    color: #5b37c0;
+    
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    min-height: 70 px;
+    background-color: #0a141d;
+    align-items: center;
+    padding: 10px;
+
+}
+.nombre_empresa{
+   font-size: 24px;
+   color: white;
+   margin: 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}.logo img{
+    height: 50px;
+    margin-right: 10px;
+
+}
+nav a{
+font-weight: 600;
+padding-right: 10px;
+}
+nav a:hover{
+    color: white;
+}
+@media(max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}

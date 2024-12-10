@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --oscuro: #07070A;
+    --azulOscuro: #0A1128;
+    --azulClaro: #006FE6;
+    --blanco: #FEFCFB;
+    --titulos: 'Baloo 2', cursive;
+    --parrafos: 'Montserrat', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*Estilos globales*/
+h1,h2,h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p,a {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ocultar {
+    display: none;
+}
+
+.contenedor {
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+
+.btn {
+    padding: 1rem 4rem;
+    font-weight: bold;
+    font-family: var(--parrafos);
+    font-size: 2rem;
+    border: none;
+    color: var(--blanco);
+
+}
+
+.bordes {
+    border: 2px solid var(--azulClaro);
+    color: var(--azulClaro);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: background-color .3s ease-in-out;
+
+
+}
+
+@media(min-width: 768px) {
+    .bordes {
+        display: inline-block;
+        margin-top: 2rem;
+    }
+}
+
+.bordes:hover {
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.azul {
+    background-color: var(--azulClaro);
+}
+
+.azul:hover {
+    cursor: pointer;
+    background-color: var(--blanco);
+    color: var(--azulClaro);
+}
+
+@keyframes desplazamiento {
+
+    /*desplazamiento incial*/
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*encabezado*/
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url(imagenes/inicio/bg.jpg);
+    background-repeat: no-repeat;
+    min-height: 70rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/*funcion para que la imagen del encabezado baje*/
+@media(min-width: 768px) {
+    .header {
+        background-attachment: fixed;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #c06537;
+}
+
+.logo h2 span {
+    color: var(--azulClaro);
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu .navbar ul li a:hover {
+    color: #CE9678;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.contenido-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanco);
+    box-shadow: 10px 10px 16px -6px rgba(0, 0, 0, 0.45);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.navegacion {
+    background-color: var(--blanco);
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    animation: desplazamiento .5s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .ocultar {
+        display: inline;
+    }
+}
+
+.navegacion a {
+    display: block;
+    font-size: 2rem;
+    padding: 1.1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+
+}
+
+.navegacion a:hover {
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+
+@media(min-width: 768px) {
+    .navegacion a {
+        display: inline;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .navegacion {
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
+}
+
+.hamburguesa span {
+    width: 5rem;
+    height: 1rem;
+    border: 3px solid rgb(128, 34, 34);
+    background-color: var(--oscuro);
+    display: block;
+}
+
+@media(min-width: 768px) {
+    .hamburguesa {
+        display: none;
+    }
+}
+
+/*contenido del encabezado*/
+#contactenos {
+    padding: 50px 20px;
+}
+
+.contenido-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.texto-encabezado {
+    flex: 1;
+    text-align: center;
+}
+
+.texto-encabezado h1 {
+    font-size: 2em;
+    margin: 0;
+    color: white;
+}
+
+/* Formulario */
+.formulario {
+    flex: 1;
+    max-width: 500px; /* Ancho ligeramente mayor */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    background: rgba(0, 0, 0, 0.6); /* Fondo translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.formulario_titulo {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formulario_input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+/* Botones */
+.formulario_submit {
+    width: 48%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.formulario_submit:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    .contenido-encabezado {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center;
+    }
+
+    .texto-encabezado {
+        text-align: center; /* Centra el texto */
+        margin-bottom: 20px;
+    }
+
+    .formulario {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 20px;
+    }
+}
+
+/*ventajas*/
+@media(min-width: 768px) {
+    .contenido-ventajas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+.ventajas {
+    padding: 5rem;
+    background-color: var(--azulOscuro);
+}
+
+.ventaja {
+    color: var(--blanco);
+    text-align: center;
+}
+
+.ventaja i {
+    font-size: 4rem;
+}
+
+.ventaja h3 {
+    font-size: 2.5rem;
+}
+
+.ventaja p {
+    font-size: 2rem;
+}
+
+/*seccion sobre nosotros*/
+.nosotros h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--azulClaro);
+}
+
+@media(min-width: 768px) {
+    .nosotros h2 {
+        font-size: 5rem;
+    }
+}
+
+
+@media(min-width: 768px) {
+
+    .contenido-nosotros {
+        padding-right: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        /* background-attachment: fixed; */
+    }
+}
+
+
+.texto-nosotros {
+    padding: 2rem;
+    background-color: var(--blanco);
+}
+
+@media(min-width: 768px) {
+    .texto-nosotros {
+        padding: 5rem;
+    }
+}
+
+.texto-nosotros h3 {
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+}
+
+.texto-nosotros p {
+    font-size: 2.2rem;
+    text-align: justify;
+}
+
+@media(min-width: 768px) {
+    .texto-nosotros p {
+        text-align: left;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*FLEXBOX*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-width: 250px;
+    font-size: 1.1rem; /* Tamaño base del texto */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+}
+
+.card h3 {
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    font-size: 1.8rem; /* Aumenta el tamaño del título */
+}
+
+.card p {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem; /* Aumenta el tamaño del texto del párrafo */
+}
+
+
+/*Seccion servicios*/
+.servicios {
+    padding-top: 5rem;
+}
+
+.servicios h2 {
+    font-size: 5rem;
+    text-align: center;
+    color: var(--azulClaro);
+}
+
+@media(min-width: 768px) {
+    .contenido-servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.servicio i {
+    background-color: var(--azulClaro);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 3rem;
+    box-shadow: 10px 10px 16px -6px rgba(0, 0, 0, 0.45);
+    transition: all .3s ease-in-out;
+}
+
+.servicio h3 {
+    font-size: 2.2rem;
+    color: var(--azulOscuro);
+}
+
+.servicio p {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .servicio p, h3 {
+        text-align: center;
+    }
+}
+
+@media(min-width: 768px) {
+    .servicio:hover {
+        cursor: pointer;
+    }
+
+    .servicio:hover .fas {
+        background-color: var(--blanco);
+        color: var(--azulClaro);
+    }
+}
+
+.footer {
+    padding: 100px 50px;
+    background-color: #000000;
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: #F9FAFC;
+    margin-bottom: 15px;
+}
+
+.link a {
+    font-size: 16px;
+    color: #C5C5C5;
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

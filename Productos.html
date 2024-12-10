@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ServiciosElectricos-ng</title>
+        <link rel="stylesheet" href="recusos/css/Productos.css">
+        <script src="https://kit.fontawesome.com/25f17e634d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/recusos/css/footer.css">
+    </head>
+
+    <body>
+           <!---------------------------------------------------------> 
+        <!---------  SERVICIOS ELECTRICOS Y MENU  ----------------->      
+    <header class="header">
+
+        <div class="header-top">
+            <div class="top-links">
+                <a href="/login/index.html" class="btn-3"> login</a> |
+                <a href="Cotizar.html">Cotizar</a>
+            </div>
+        </div>
+        <div class="header-1"> 
+            <a href="Inicio.html" class="logo">
+                <img src="/IMAGENES_CONTACO/LOGO_OFICIAL_1.png" alt="logo de la empresa">
+                <h2 class="nombre_empresa"><span class="Servicios">SERVICIOS</span> <span class="Electronicos">ELÉCTRONICOS</span></h2>
+            </a>
+            <!---------  CASILLA DE VERIFICACION PARA CUANDO LA PAGINA SEA RESPONSIVE SE LE PUEDA DAR CLICK  -----------------> 
+            <input type="checkbox" id="menu"/>
+            <!---------  ESTABLECE CLASE E IMAGENE DEL MENU EN UN ESENARIO RESPONSIVO -----------------> 
+            <label for="menu">
+                <img src="recusos/css/imagenes/Producto/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <!---------  NAVEGACION DEL MENU -----------------> 
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                    <li><a href="Productos.html">Productos</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-2">
+                <!---------  buscador  -----------------> 
+             
+                <div class="search-section">
+                    <input type="text" placeholder="¿Qué producto estás buscando?" class="search-bar">
+                    <button class="search-button"><img src="" alt="Buscar"></button>
+                </div>
+                
+                <!---------  click en el carrito -----------------> 
+                <div class="submenu">
+                            <img src="recusos/css/imagenes/Producto/car.svg" id="img-carrito" alt="carrito">
+                            <div id="carrito">
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th> Images </th>
+                                            <th> Nombre </th>
+                                            <th> Precio </th>
+                                            <th> Cantidad </th>
+                                            <th> Acciones </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                     <!--------- SE ENCUENTRA VACION POR QUE LOS VALORES QUE IRAN ACA SON DINAMICOS Y DEPENDEN DE JAVA SCRIP -----------------> 
+                                    </tbody>
+                                </table>
+                                 <!-- Mensaje de carrito vacío -->
+                                 <p id="mensaje-vacio" style="display: none;">Tu carrito está vacío.</p>
+
+                                 
+                                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                                <div class="carrito-total">
+                                    <div class="fila">
+                                        <strong>Tu Total</strong>
+                                        <span class="carrito-precio-total"></span>
+                                    </div>
+                                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+                                </div>
+                                
+                            </div>
+                </div>
+        </div>
+
+    </header>
+            <!---------------------------------------------------------> 
+            <!---------  TRASSICIONES ---------------------------------> 
+    <div class="header-content">
+        <div class="header-img">
+            <div class="image-slider">
+            <img src="recusos/css/imagenes/Producto/right.png" alt="Imagen 1" class="slider-image">
+            <img src="recusos/css/imagenes/Producto/right1.png" alt="Imagen 2" class="slider-image">
+            <img src="recusos/css/imagenes/Producto/right2.jpg" alt="Imagen 3" class="slider-image">
+            </div>
+        </div>
+        <div class="header-txt">
+            <h1>Ofertas especiales</h1>
+            <p>Estrena los mejores equipos</p>
+            <button id="informacion">informacion</button>
+
+    <div id="ofertasModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ofertas Especiales en Equipos Eléctricos</h2>
+            <div class="offer-item">
+                <h3>Multímetro Digital</h3>
+                <p>20% de descuento en todos nuestros multímetros profesionales</p>
+            </div>
+            <div class="offer-item">
+                <h3>Kit de Herramientas</h3>
+                <p>Lleva un kit completo de herramientas con 30% de descuento</p>
+            </div>
+            <div class="offer-item">
+                <h3>Materiales Eléctricos</h3>
+                <p>Descuentos especiales en cables y conectores</p>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+            <!---------------------------------------------------------> 
+
+            <!---------  CUERPO 1 ---------------------------------> 
+        <section class="ofert-container">
+            
+            <div class="ofert-1">
+                <div class="ofert-img">
+                    <img src="recusos/css/imagenes/Producto/f1.png" alt="">
+                </div>
+
+                <div class="info-button" id="multimetroBtn">
+                    <div class="info-text">MULTIMETRO DIGITAL</div>
+                    <div class="info-specs">600VAC/DC,10AAC/DC, 40MOhms, CAT III-600V</div>  
+                    
+                    <div class="info-popup" id="infoPopup">
+                        <button class="close-button" id="closeBtn">×</button>
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul class="spec-list">
+                            <li>Voltaje AC/DC: 600V máximo</li>
+                            <li>Corriente AC/DC: 10A máximo</li>
+                            <li>Resistencia: hasta 40MOhms</li>
+                            <li>Categoría de seguridad: CAT III-600V</li>
+                            <li>Display LCD retroiluminado</li>
+                            <li>Medición de continuidad con buzzer</li>
+                            <li>Función Data Hold</li>
+                            <li>Incluye puntas de prueba</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ofert-1">
+                <div class="ofert-img">
+                    <img src="recusos/css/imagenes/Producto/f2.png" alt="">
+                </div>
+                <div class="info-button" id="taladroBtn">
+                    <div class="info-text">TALADRO</div>
+                    <div class="info-specs">Taladro para liniero y banco imantado, mandril 1 1/2¨ M18</div>  
+
+                    <div class="info-popup" id="infoPopup">
+                        <button class="close-button" id="closeBtn">×</button>
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul class="spec-list">
+                            <li>Potencia: 750W máximo</li>
+                            <li>Velocidad sin carga: Hasta 3000 rpm</li>
+                            <li>Capacidad del portabrocas: 1.5 - 13 mm</li>
+                            <li>Función de percusión: Sí, con selector</li>
+                            <li>Diámetro máximo de perforación:</li>
+                            <li>Control de velocidad: Electrónico</li>
+                            <li>Mango auxiliar: Incluido, con ajuste de 360°</li>
+                            <li>Cable de alimentación: 2 metros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ofert-1">
+                <div class="ofert-img">
+                    <img src="recusos/css/imagenes/Producto/f3.png" alt="">
+                </div>
+                <div class="info-button" id="AMOLADORABtn">
+                    <div class="info-text">AMOLADORA</div>
+                    <div class="info-specs">Amoladora angular GWS 850 - 850W Bosch</div>  
+
+                    <div class="info-popup" id="infoPopup">
+                        <button class="close-button" id="closeBtn">×</button>
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul class="spec-list">
+                            <li>Potencia: 800W máximo</li>
+                            <li>Velocidad sin carga: Hasta 11,000 rpm</li>
+                            <li>Diámetro del disco: 115 mm</li>
+                            <li>Rosca del husillo: M14</li>
+                            <li>Sistema de bloqueo del disco: Sí, botón de seguridad</li>
+                            <li>Protector ajustable del disco: Incluido</li>
+                            <li>Empuñadura lateral: Incluida, con 3 posiciones</li>
+                            <li>Cable de alimentación: 2 metros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!---------------------------------------------------------> 
+             <!---------  CUERPO 2 productos ---------------------------------> 
+        <main class="products container" id="lista-1">
+
+            <h2>Productos</h2>
+            <div class="product-content">
+
+
+                <div class="product">
+                    <img src="recusos/css/imagenes/Producto/1.png" alt="">
+                    <div class="product-txt">
+                        <h3>CABLES</h3>
+                        <p>calidad premium</p>
+                        <p class="precio">$100</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="1">agregar-carrito</a>
+                    </div>
+                </div>
+
+                    <div class="product">
+                        <img src="recusos/css/imagenes/Producto/2.png" alt="">
+                        <div class="product-txt">
+                            <h3>INTERRUPTOR</h3>
+                            <p>calidad premium</p>
+                            <p class="precio">$50</p>
+                            <a href="#" class="agregar-carrito btn-2" data-id="2">agregar-carrito</a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                            <img src="recusos/css/imagenes/Producto/3.png" alt="">
+                            <div class="product-txt">
+                                <h3>FOCOS</h3>
+                                <p>calidad premium</p>
+                                <p class="precio">$84</p>
+                                <a href="#" class="agregar-carrito btn-2" data-id="3">agregar-carrito</a>
+                            </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="recusos/css/imagenes/Producto/4.png" alt="">
+                        <div class="product-txt">
+                            <h3>FUSIBLES</h3>
+                            <p>calidad premium</p>
+                            <p class="precio">$10</p>
+                            <a href="#" class="agregar-carrito btn-2" data-id="4">agregar-carrito</a>
+                        </div>
+                    </div>
+
+                     <div class="product">
+                        <img src="recusos/css/imagenes/Producto/5.png" alt="">
+                        <div class="product-txt">
+                            <h3>DESTORNILLADOR</h3>
+                            <p>calidad premium</p>
+                            <p class="precio">$150</p>
+                            <a href="#" class="agregar-carrito btn-2" data-id="5">agregar-carrito</a>
+                        </div>
+                     </div>
+
+                     <div class="product">
+                        <img src="recusos/css/imagenes/Producto/6.png" alt="">
+                        <div class="product-txt">
+                            <h3>GUANTES DIALECTICOS</h3>
+                            <p>calidad premium</p>
+                            <p class="precio">$800</p>
+                            <a href="#" class="agregar-carrito btn-2" data-id="6">agregar-carrito</a>
+                        </div>
+                     </div>
+            </div>
+        </main>
+        <!---------------------------------------------------------> 
+        <!---------  CUERPO 3 iconos ---------------------------------> 
+        <section class="icons container">
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="recusos/css/imagenes/Producto/i1.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3>ILUMINACION DE CALIDAD </h3>
+                    <p>
+                        amet cosecteur
+                    </p>
+                </div>
+            </div>
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="recusos/css/imagenes/Producto/i2.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3>SEGURIDAD ELECTRICA</h3>
+                    <p>
+                        amet cosecteur
+                    </p>
+                </div>
+            </div>
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="recusos/css/imagenes/Producto/i3.svg" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3>CONFIANZA EN LOS PRODUCTOS </h3>
+                    <p>
+                        amet cosecteur
+                    </p>
+                </div>
+            </div>
+        </section>
+  <!---------------------------------------------------------> 
+  <!---------  CUERPO 4 blog ---------------------------------> 
+        <section class="blog container">
+            <div class="blog-content">
+            <div class="blog-1">
+                <img src="recusos/css/imagenes/Inicio/blog1.jpg" alt="">
+                <h3>Bienvenidos a nuestro blog echo para ti</h3>
+                <p>
+                    Bienvenidos a nuestro blog Aprendamos N-G, a través de este canal comprenderás ¿Cómo la electricidad puede generar incendios?
+                    , industrial y noticias relevantes con un lenguaje sencillo de entender.
+                </p> 
+            </div>
+            <div class="blog-1">
+                <img src="recusos/css/imagenes/Inicio/blog2.jpg" alt="">
+                <h3>Eficiencia Energética de Motores</h3>
+                <p>
+                    Los variadores de frecuencia, también conocidos como regulador de frecuencia para motores o VFD, son utilizados 
+                    para controlar la velocidad y el funcionamiento de los motores eléctricos
+                </p>
+            </div>
+            <div class="blog-1">
+                <img src="recusos/css/imagenes/Inicio/blog3.jpg" alt="">
+                <h3>Autoconsumo colectivo en 2023</h3>
+                <p>
+                    En este post exploraremos el emergente mundo del autoconsumo colectivo de energía y su importante papel en la transición hacia un mañana más sostenible.
+                </p>
+            </div>
+        </div>
+
+        </section>
+  <!---------------------------------------------------------> 
+  <!---------  footer ---------------------------------> 
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure><a href=""><img src="/IMAGENES_CONTACO/LOGO_OFICIAL_1.png" alt="Logo de Slee Dw"></a></figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSTROS</h2>
+            <p>Brindamos servicios eléctricos confiables para hogares y empresas, con técnicos certificados.</p>
+            <p>Garantizamos calidad y sostenibilidad en cada proyecto, superando tus expectativas.</p>
+        </div>
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a href="" class="fa fa-facebook"></a>
+                <a href="" class="fa fa-instagram"></a>
+                <a href="" class="fa fa-twitter"></a>
+                <a href="" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2024 <b>Servicios Electricos N-G</b> - Todos Los Derechos Reservados.</small>
+    </div>
+
+
+</footer>
+        <script src="recusos/js/Productos.js"></script>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiciosElectricos-ng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/login/css/menu.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        
+        <div class="logo">
+        <h1>Servicios <span> Electricos-NG</h1>
+        </div>
+        <div class="user-menu">
+            <span>Bienvenido, <strong id="username">Usuario</strong></span>
+            <button id="logout">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-container">
+        <!-- Menú lateral -->
+        <aside class="sidebar">
+             <!-- Sección de perfil con imagen -->
+             <div class="user-profile">
+                <img src="/login/images/perfil.png"  alt="Imagen de Perfil" id="profile-picture">
+              <strong id="username1">Usuario</strong> <!-- Esto también se actualiza -->
+            </div>
+            </div>
+            <!-- Navegación -->
+            <nav>
+                <ul>
+                    <li><a href="#" id="products">Productos</a></li>
+                    <li><a href="#" id="calibration-services">Servicios de Calibración</a></li>
+                    <li><a href="#" id="order-history">Historial de Compras</a></li>
+                    <li><a href="#" id="support">Soporte Técnico</a></li>
+                    <li><a href="#" id="profile">Perfil</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Panel principal -->
+        <section class="dashboard">
+        <!-- Botón para colapsar la barra lateral -->
+        <button class="toggle-sidebar" id="toggle-sidebar">⇔</button>
+            <!-- Tarjetas de resumen -->
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>Productos Disponibles</h3>
+                    <p id="products-count">1,234</p>
+                </div>
+                <div class="card">
+                    <h3>Servicios Solicitados</h3>
+                    <p id="services-count">45</p>
+                </div>
+                <div class="card">
+                    <h3>Total Gastado</h3>
+                    <p id="total-spent">$12,345</p>
+                </div>
+            </div>
+
+            <!-- Productos destacados -->
+            <section class="featured-products">
+                <h2>Productos Destacados</h2>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <h3>Multímetro Digital</h3>
+                        <p>$99.99</p>
+                        <button>Comprar</button>
+                    </div>
+                    <div class="product-item">
+                        <h3>Pinzas Amperimétricas</h3>
+                        <p>$129.99</p>
+                        <button>Comprar</button>
+                    </div>
+                    <div class="product-item">
+                        <h3>Estación de Soldadura</h3>
+                        <p>$199.99</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Servicios de calibración -->
+            <section class="calibration-services">
+                <h2>Servicios de Calibración</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Precio</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Calibración de Multímetros</td>
+                            <td>$50.00</td>
+                            <td><button>Solicitar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Calibración de Osciloscopios</td>
+                            <td>$120.00</td>
+                            <td><button>Solicitar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Calibración de Fuentes de Poder</td>
+                            <td>$80.00</td>
+                            <td><button>Solicitar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2024 <b>Servicios Electricos N-G</b> - Todos Los Derechos Reservados.</p>
+    </footer>
+
+    <script src="/login/js/menu.js"></script>
+</body>
+</html>

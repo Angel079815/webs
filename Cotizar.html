@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiciosElectricos-ng</title>
+    <script src="https://kit.fontawesome.com/25f17e634d.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="recusos/css/Cotizar.css">
+    <link rel="stylesheet" href="/recusos/css/footer.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="header-top">
+            <div class="top-links">
+                <a href="login/index.html" class="btn-3"> login</a> |
+                <a href="Cotizar.html">Cotizar</a>
+            </div>
+        </div>
+        <div class="header-1"> 
+            <a href="Inicio.html" class="logo">
+                <img src="/IMAGENES_CONTACO/LOGO_OFICIAL_1.png" alt="logo de la empresa">
+                <h2 class="nombre_empresa"><span class="Servicios">SERVICIOS</span> <span class="Electronicos">ELÉCTRONICOS</span></h2>
+            </a>
+            <!---------  CASILLA DE VERIFICACION PARA CUANDO LA PAGINA SEA RESPONSIVE SE LE PUEDA DAR CLICK  -----------------> 
+            <input type="checkbox" id="menu"/>
+            <!---------  ESTABLECE CLASE E IMAGENE DEL MENU EN UN ESENARIO RESPONSIVO -----------------> 
+            <label for="menu">
+                <img src="recusos/css/imagenes/Producto/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <!---------  NAVEGACION DEL MENU -----------------> 
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                    <li><a href="Productos.html">Productos</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+    <div class="container">
+        <h1>COTIZACIÓN</h1>
+
+        <div class="upload-section">
+            <div class="button-group">
+                <button onclick="document.getElementById('fileInput').click()">Seleccionar archivo</button>
+                <button onclick="handleUpload()">Subir archivo Excel</button>
+                <input type="file" id="fileInput" style="display: none" accept=".xlsx,.xls">
+            </div>
+            <p class="info-text">
+                La planilla debe contener sólo los campos Código Dartel (SKU) ó Código Proveedor y Cantidad, puede descargar el siguiente 
+                <a href="#" onclick="downloadExample()">Ejemplo</a>
+            </p>
+        </div>
+
+        <div class="products-section">
+            <h2>PRODUCTO(S) SUJETO A DISPONIBILIDAD</h2>
+            <div class="no-products">
+                No tiene productos en su cotización
+                <p>Haga clic <a href="Productos.html">aquí</a> para continuar comprando.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure><a href=""><img src="/IMAGENES_CONTACO/LOGO_OFICIAL_1.png" alt="Logo de Slee Dw"></a></figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSTROS</h2>
+                <p>Brindamos servicios eléctricos confiables para hogares y empresas, con técnicos certificados.</p>
+                <p>Garantizamos calidad y sostenibilidad en cada proyecto, superando tus expectativas.</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="" class="fa fa-instagram"></a>
+                    <a href="" class="fa fa-twitter"></a>
+                    <a href="" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>Servicios Electricos N-G</b> - Todos Los Derechos Reservados.</small>
+        </div>
+
+
+    </footer>
+
+    <script src="recusos/js/Cotizar.js"></script>
+</body>
+</html>
